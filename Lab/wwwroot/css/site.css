@@ -1,0 +1,6 @@
+html { font-size: 14px; }
+body { margin-bottom: 40px; color: #212529; }
+.product-thumb { width: 80px; height: 65px; object-fit: cover; }
+.product-preview { max-width: 220px; max-height: 180px; object-fit: contain; }
+.description-cell { max-width: 260px; white-space: normal; }
+.field-validation-error { display: block; }

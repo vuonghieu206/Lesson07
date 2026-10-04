@@ -1,0 +1,10 @@
+@model MyAppMVC.Models.Product
+@{ ViewData["Title"] = "Thêm sản phẩm"; }
+<h1>Thêm sản phẩm</h1>
+<form asp-action="Create" method="post" enctype="multipart/form-data">
+    <input type="hidden" asp-for="Image" />
+    <partial name="_ProductForm" model="Model" />
+    <button type="submit" class="btn btn-primary">Thêm mới</button>
+    <a asp-action="Index" class="btn btn-secondary">Quay lại</a>
+</form>
+@section Scripts { <partial name="_ValidationScriptsPartial" /> }

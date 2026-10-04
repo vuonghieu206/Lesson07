@@ -1,0 +1,3 @@
+wwwroot\css\site.css
+wwwroot\products\dd2e5b45-8cf3-41c8-843d-b464b7c6a369.jpg
+C:\Users\Admin\Downloads\MyAppMVC\wwwroot\css\site.css

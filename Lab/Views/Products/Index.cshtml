@@ -1,0 +1,23 @@
+@model IEnumerable<MyAppMVC.Models.Product>
+@{ ViewData["Title"] = "Danh sách sản phẩm"; }
+<h1>Danh sách sản phẩm</h1>
+<p><a asp-action="Create" class="btn btn-primary">Thêm mới</a></p>
+<table class="table table-bordered table-striped align-middle">
+    <thead><tr><th>Ảnh</th><th>Tên</th><th>Danh mục</th><th>Giá</th><th>Giá khuyến mãi</th><th>Mô tả</th><th></th></tr></thead>
+    <tbody>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td><img src="~/products/@item.Image" alt="@item.Name" class="product-thumb" /></td>
+            <td>@item.Name</td><td>@item.Category?.Name</td>
+            <td>@item.Price.ToString("N0")</td><td>@item.SalePrice.ToString("N0")</td>
+            <td class="description-cell">@item.Description</td>
+            <td class="text-nowrap">
+                <a asp-action="Details" asp-route-id="@item.Id">Chi tiết</a> |
+                <a asp-action="Edit" asp-route-id="@item.Id">Sửa</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Xóa</a>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>
